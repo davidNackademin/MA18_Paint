@@ -18,15 +18,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wsz-Ih-oRy" customClass="CanvasView" customModule="MA18IOs_graphics" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="602"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ytn-LR-aAz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNd-AY-e3u">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="7Ci-NR-1ri">
+                                        <connections>
+                                            <action selector="resetImage:" destination="BYZ-38-t0r" id="7Zr-0z-49S"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="E8I-vd-IEg"/>
+                                    <barButtonItem title="●" id="xqY-aM-uu4">
+                                        <color key="tintColor" red="1" green="0.18682215748142461" blue="0.16727208293652196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="setColor:" destination="BYZ-38-t0r" id="svE-tY-MFn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="●" id="zsh-IB-Sst">
+                                        <color key="tintColor" red="0.99852723528460119" green="1" blue="0.22250517871150421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="setColor:" destination="BYZ-38-t0r" id="Mu5-Me-RCK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="●" id="h9Z-Bp-W5H">
+                                        <color key="tintColor" red="0.17611449857235462" green="1" blue="0.26003146614030159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="setColor:" destination="BYZ-38-t0r" id="Dam-Hb-IiT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="●" id="Xc2-sy-fyJ">
+                                        <color key="tintColor" red="0.2555656195518885" green="0.31815267170170303" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="setColor:" destination="BYZ-38-t0r" id="gFM-fD-aG4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ali-DU-0Pa"/>
+                                    <barButtonItem title="-" id="yRX-Gw-QaT">
+                                        <connections>
+                                            <action selector="decreaseLineWidth:" destination="BYZ-38-t0r" id="FMx-4d-yCd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="+" id="1fw-3E-UQ2">
+                                        <connections>
+                                            <action selector="increaseLineWidth:" destination="BYZ-38-t0r" id="xxQ-Zy-lwq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="canvas" destination="Ytn-LR-aAz" id="vvL-Sp-Rk1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
